@@ -1,9 +1,7 @@
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { FaBars, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa6";
-import { useState } from "react";
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa6";
 const Header = () => {
-  const [navOpen, setNavOpen] = useState(false);
   return (
     <>
       <header>
@@ -34,28 +32,6 @@ const Header = () => {
           </section>
         </nav>
         {/* main nav */}
-        <nav className="p-2 grid grid-cols-2">
-          <h1 className="text-2xl">Task-App</h1>
-          <button
-            className="justify-self-end text-[30px] md:hidden"
-            onClick={() => {
-              setNavOpen(!navOpen);
-            }}
-          >
-            <FaBars />
-          </button>
-          <ul
-            className={`px-2 flex flex-col md:flex-row ${
-              !navOpen && "h-0"
-            } md:justify-self-end  overflow-hidden gap-2 md:h-auto md:gap-4 text-[17px]`}
-          >
-            <li>Login</li>
-            <li>Rgister</li>
-            <li>Rgister</li>
-            <li>Rgister</li>
-            <li>Rgister</li>
-          </ul>
-        </nav>
       </header>
     </>
   );
